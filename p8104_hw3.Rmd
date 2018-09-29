@@ -1,0 +1,81 @@
+---
+title: "P8104 Homework 3"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\begin{center}
+\textbf{Nick Williams \\
+ntw2117}
+\end{center}
+
+## Problem 1
+
+(1) 
+
+(2)
+
+## Problem 2  
+
+$$f_X(x) = 2xI\{0<x<1\}$$
+
+(1) 
+$$
+\begin{aligned}
+  Y = g(x) &= 4X - 3 \\
+  \frac{d}{dx}g(x) &= 4 > 0 & \text{thus } g(x) \text{is an increasing function} \\
+  g^{-1}(y) &= \frac{y + 3}{4} 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  f_Y(y) &= f_X(g^{-1}(y))|\frac{d}{dy} g^{-1}(y)| \\
+         &= f_X(\frac{y + 3}{4}) |\frac{1}{4}| & \frac{d}{dy}g^{-1}(y) = \frac{1}{4} \\
+         &= 2\frac{y + 3}{4} (\frac{1}{4}) \\
+         &= \frac{y + 3}{8} \text{ for } -3 < y < 1
+\end{aligned}
+$$
+
+(2)
+$$
+\begin{aligned}
+  Y = g(x) &= 3 - X^2 \\
+  \frac{d}{dy}g(x) &= -2x < 0 & \text{ monotone }\forall \text{ } 0 < x < 1 \\
+  g^{-1}(y) &= \sqrt{3 - y}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  f_Y(y) &= f_X(g^{-1}(y))|\frac{d}{dy} g^{-1}(y)| \\
+         &= f_x(\sqrt{3 - y}) \bigg|-\frac{1}{2 \sqrt{3 - y}}\bigg| & \frac{d}{dy}g^{-1}(y) = -\frac{1}{2\sqrt{3 - y}} \\
+         &= f_x(\sqrt{3 - y}) \bigg(\frac{1}{2 \sqrt{3 - y}} \bigg) \\
+         &= 2(\sqrt{3 - y}) \bigg(\frac{1}{2 \sqrt{3 - y}} \bigg) \\
+         &= 1 \text{ for } 2 < y < 3
+\end{aligned}
+$$
+
+## Problem 3
+
+(1)  
+
+(2)  
+$$
+\begin{aligned}
+X \sim U(-1, 1) & & f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
+Y = g(x) = e^x & & g^{-1}(y) = log(x) \\
+\end{aligned}
+$$
+
+Because $\frac{d}{dy} g(x) = e^x > 0$ $\forall x \in [-1, 1]$, $g(x)$ is an increasing function and monontone
+
+
+
+
+
+
+
