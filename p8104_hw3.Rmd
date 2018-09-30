@@ -71,8 +71,35 @@ Y = g(x) = e^x & & g^{-1}(y) = log(x) \\
 \end{aligned}
 $$
 
-Because $\frac{d}{dy} g(x) = e^x > 0$ $\forall x \in [-1, 1]$, $g(x)$ is an increasing function and monontone
+Because $\frac{d}{dx} g(x) = e^x > 0$ $\forall x \in [-1, 1]$, $g(x)$ is an increasing function and monotone; therefore
 
+$$
+\begin{aligned}
+  f_Y(y) &= f_X(g^{-1}(y)) \bigg|\frac{d}{dy} g^{-1}(y) \bigg| &   F_Y(y) &= F_X(g^{-1}(y)) \\
+         &= \frac{1}{2} \bigg| \frac{1}{y} \bigg|              &          &= \frac{g^{-1}(y) + 1}{2} \\
+         &= \frac{1}{2y}                                       &          &= \frac{\log(y) + 1}{2} \\
+\end{aligned}
+$$
+
+\vspace{1cm}
+
+$$
+\begin{aligned}
+X \sim U(-1, 1) & & f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
+Z = g(x) = -\log(X + 1) & & g^{-1}(z) = e^{-z} - 1 \\
+\end{aligned}
+$$
+
+Because $\frac{d}{dx} g(z) = -\frac{1}{x + 1} < 0$ $\forall x \in [-1, 1]$, $g(x)$ is a decreasing function and monotone; therefore
+
+$$
+\begin{aligned}
+  F_Z(z) &= 1 - F_X(g^{-1}(z))                      &   f_Z(z) &= f_X(g^{-1}(z)) \bigg|\frac{d}{dz} g^{-1}(z) \bigg| \\
+         &= 1 - F_X(e^{-z} - 1)                     &          &= \frac{1}{2} \bigg| -e^{-z} \bigg| \\
+         &= 1 - \frac{(e^{-z} - 1) + 1}{2}          &          &= \frac{e^{-z}}{2} \\
+         &= - \frac{e^{-z}}{2}
+\end{aligned}
+$$
 
 
 
