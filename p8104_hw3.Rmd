@@ -66,8 +66,8 @@ $$
 (2)  
 $$
 \begin{aligned}
-X \sim U(-1, 1) & & f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
-Y = g(x) = e^x & & g^{-1}(y) = log(x) \\
+X \sim U(-1, 1) & \text{ thus } & &f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
+Y = g(x) = e^x & \text{ thus } & &g^{-1}(y) = log(x) \\
 \end{aligned}
 $$
 
@@ -85,12 +85,12 @@ $$
 
 $$
 \begin{aligned}
-X \sim U(-1, 1) & & f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
-Z = g(x) = -\log(X + 1) & & g^{-1}(z) = e^{-z} - 1 \\
+X \sim U(-1, 1) & \text{ thus } & &f_X(x) = \frac{1}{2} \text{ for } -1 \leq x \leq 1 \\
+Z = g(x) = -\log(X + 1) & \text{ thus } & &g^{-1}(z) = e^{-z} - 1 \\
 \end{aligned}
 $$
 
-Because $\frac{d}{dx} g(z) = -\frac{1}{x + 1} < 0$ $\forall x \in [-1, 1]$, $g(x)$ is a decreasing function and monotone; therefore
+Because $\frac{d}{dx} g(x) = -\frac{1}{x + 1} < 0$ $\forall x \in [-1, 1]$, $g(x)$ is a decreasing function and monotone; therefore
 
 $$
 \begin{aligned}
@@ -102,7 +102,47 @@ $$
 $$
 
 
+## Problem 5
 
+$$f_X(x) = cx^2I\{-1 < x < 1 \}$$  
 
+(1) Because $f_X(x) \geq 0 \forall x$, $c >0$: 
 
+$$
+\begin{aligned}
+  1 &= \int_{-\infty}^{\infty} f_X(x) dx \\
+    &= \int_{-\infty}^{\infty} cx^2I\{-1 < x < 1 \}dx \\
+    &= c \int_{-1}^1 x^2dx \\
+    &= c \frac{1}{3}x^3 \bigg|_{-1}^1 \\
+    &= c\frac{1}{3}(1)^3 - c\frac{1}{3}(-1)^3 \\
+  c &= \frac{3}{2} > 0   
+\end{aligned}
+$$
 
+(2)
+
+$$
+\begin{aligned}
+  F_X(x) = P(X \leq x) &= \int f_X(x)dx \\
+  &= \int \frac{3}{2}x^2 I\{-1 < x < 1\}dx \\
+  &= \frac{3}{6}x^3 \\
+  &= \frac{x^3}{2} \forall \{-1 < x < 1\}
+\end{aligned}
+$$
+
+(3) 
+
+$$
+U \sim U(0, 1) 
+$$
+
+To find $F^1(U)$, we need to solve $y = \frac{x^3}{2}$ for $x$ in terms of $y \in (0, 1)$
+
+$$
+\begin{aligned}
+  F_X(F^{-1}(u)) &= u \\
+  \frac{(F^{-1}(U))^3}{2} &= \\
+  (F^{-1}(U))^3 &= 2u \\
+  F^{-1}(U) &= 2u^{1/3} \ \forall U \in (0, 1)
+\end{aligned}
+$$
