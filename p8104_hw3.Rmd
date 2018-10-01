@@ -85,6 +85,30 @@ $$
 
 (1)  
 
+$$
+\begin{aligned}
+X \sim U(0, 1) & & g(x) = -2\log(x) & &  g^{-1}(y) = e^{-y/2}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+F_Y(y) &= 1 - F_X(g^{-1}(y)) \\
+&= 1 - F_X(e^{-y/2}) \\
+&= -e^{-y/2}
+\end{aligned}
+$$
+
+$\frac{d}{dy}g(x) = -\frac{2}{x} < 0$ for $0 < x < 1$, therefore
+
+$$
+\begin{aligned}
+f_Y(y) &= f_X(g^{-1}(y)) \bigg| \frac{d}{dy}g^{-1}(y) \bigg | \\
+&= 1(\bigg| -\frac{e^-y/2}{2} \bigg|) & & \frac{d}{dy}e^{-y/2} = e^{-y/2}\frac{d}{dy}-y/2 = -\frac{1}{2}e^{-y/2} \\
+&= \frac{e^{-y/2}}{2}
+\end{aligned}
+$$
+
 (2)  
 $$
 \begin{aligned}
@@ -93,7 +117,7 @@ Y = g(x) = e^x & \text{ thus } & &g^{-1}(y) = log(x) \\
 \end{aligned}
 $$
 
-Because $\frac{d}{dx} g(x) = e^x > 0$ $\forall x \in [-1, 1]$, $g(x)$ is an increasing function and monotone; therefore
+Because $\frac{d}{dx} g(x) = e^x > 0$ $\forall x \in (-1, 1)$, $g(x)$ is an increasing function and monotone; therefore
 
 $$
 \begin{aligned}
@@ -112,7 +136,7 @@ Z = g(x) = -\log(X + 1) & \text{ thus } & &g^{-1}(z) = e^{-z} - 1 \\
 \end{aligned}
 $$
 
-Because $\frac{d}{dx} g(x) = -\frac{1}{x + 1} < 0$ $\forall x \in [-1, 1]$, $g(x)$ is a decreasing function and monotone; therefore
+Because $\frac{d}{dx} g(x) = -\frac{1}{x + 1} < 0$ $\forall x \in (-1, 1)$, $g(x)$ is a decreasing function and monotone; therefore
 
 $$
 \begin{aligned}
